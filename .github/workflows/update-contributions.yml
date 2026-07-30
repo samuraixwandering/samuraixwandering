@@ -1,0 +1,43 @@
+name: Update contributions
+
+on:
+  schedule:
+    # 04:23 UTC daily. Off-peak minute on purpose: :00 is heavily contended.
+    - cron: '23 4 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'scripts/update-contributions.sh'
+      - '.github/workflows/update-contributions.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-contributions
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Regenerate contributions section
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: ./scripts/update-contributions.sh
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- README.md; then
+            echo "README unchanged, nothing to commit"
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git commit -m "chore: refresh contributions list"
+          git push
