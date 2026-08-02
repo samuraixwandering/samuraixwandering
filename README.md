@@ -1,7 +1,7 @@
 ## samuraiXwandering
 
 Security engineer. Backends, integration and test tooling.  
-Go · Rust · Python · TypeScript.
+Go · Rust · Python · TypeScript
 
 Focus: identity and workload auth (SPIFFE/SPIRE), integration and CI/test systems.
 
