@@ -57,7 +57,7 @@ search = ("https://github.com/search?q=is%3Apr+author%3A" + USER +
           "+is%3Amerged&type=pullrequests")
 note = f" Showing {len(items)} of {total}; the API caps results." if total > len(items) else ""
 
-section = f"""**{total}** merged pull request(s) in repositories I do not own.{note}
+section = f"""**{total}** merged PR{"s" if total != 1 else ""} in other people's repos.{note}
 
 {table}
 """
@@ -67,10 +67,8 @@ if recent_md:
 
 {recent_md}
 """
-section += (f"""
-<sub>Updated {stamp} by """
-            f"""[update-contributions.yml](.github/workflows/update-contributions.yml) """
-            f"""· [full list]({search})</sub>""")
+section += f"""
+<sub>Updated {stamp} · [all merged PRs]({search})</sub>"""
 
 text = open(readme_path).read()
 if "CONTRIBUTIONS:START" not in text:
