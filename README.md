@@ -1,12 +1,15 @@
 ## samuraiXwandering
 
-Security engineer. Backends, integration and test tooling. Go, Rust, Python, TypeScript.
+Security engineer. Backends, integration and test tooling.  
+Go · Rust · Python · TypeScript.
 
-### Open source
+Focus: identity and workload auth (SPIFFE/SPIRE), integration and CI/test systems.
+
+### Upstream contributions
 
 <!-- CONTRIBUTIONS:START -->
 
-**3** merged pull request(s) in repositories I do not own.
+**3** merged PRs in other people's repos.
 
 | Project | Merged |
 | --- | --- |
@@ -18,9 +21,6 @@ Security engineer. Backends, integration and test tooling. Go, Rust, Python, Typ
 - [spiffe/spire#7179](https://github.com/spiffe/spire/pull/7179) integration: replace k8sbundle notifier with k8s_configmap BundlePublisher <sub>2026-07-31</sub>
 - [spiffe/spire#7172](https://github.com/spiffe/spire/pull/7172) k8s suite: replace k8sbundle notifier with k8s_configmap BundlePublisher <sub>2026-07-29</sub>
 
-<sub>Updated 2026-08-02 by [update-contributions.yml](.github/workflows/update-contributions.yml) · [full list](https://github.com/search?q=is%3Apr+author%3Asamuraixwandering+is%3Amerged&type=pullrequests)</sub>
+<sub>Updated 2026-08-02 · [all merged PRs](https://github.com/search?q=is%3Apr+author%3Asamuraixwandering+is%3Amerged&type=pullrequests)</sub>
 
 <!-- CONTRIBUTIONS:END -->
-
-Always current, straight from GitHub:
-[merged pull requests](https://github.com/search?q=is%3Apr+author%3Asamuraixwandering+is%3Amerged&type=pullrequests)
