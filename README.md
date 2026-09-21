@@ -30,6 +30,6 @@ Go · Rust · Python · TypeScript
 - [spiffe/spire#7185](https://github.com/spiffe/spire/pull/7185) ci: fix nightly AWS CA certs push and limit to main repo <sub>2026-08-02</sub>
 - [spiffe/spire#7179](https://github.com/spiffe/spire/pull/7179) integration: replace k8sbundle notifier with k8s_configmap BundlePublisher <sub>2026-07-31</sub>
 
-<sub>Updated 2026-09-20 · [all merged PRs](https://github.com/search?q=is%3Apr+author%3Asamuraixwandering+is%3Amerged&type=pullrequests)</sub>
+<sub>Updated 2026-09-21 · [all merged PRs](https://github.com/search?q=is%3Apr+author%3Asamuraixwandering+is%3Amerged&type=pullrequests)</sub>
 
 <!-- CONTRIBUTIONS:END -->
